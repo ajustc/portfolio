@@ -83,7 +83,7 @@ export default function Home () {
                   stroke-width='2'
                   stroke-linecap='round'
                   stroke-linejoin='round'
-                  classname='feather feather-x'
+                  className='feather feather-x'
                 >
                   <line x1='18' y1='6' x2='6' y2='18'></line>
                   <line x1='6' y1='6' x2='18' y2='18'></line>
@@ -434,13 +434,13 @@ export default function Home () {
                   </button>
 
                   <div
-                    classname={`modal h-screen w-full fixed left-0 top-0 overflow-y-auto flex justify-center items-center bg-black bg-opacity-50
+                    className={`modal h-screen w-full fixed left-0 top-0 overflow-y-auto flex justify-center items-center bg-black bg-opacity-50
                     ${modal === 0 ? 'hidden' : 'block'}
                     `}
                   >
-                    <div classname='bg-white rounded shadow-lg w-10/12 md:w-2/3 h-2/3 md:h-3/4 overflow-y-auto'>
-                      <div classname='border-b px-4 py-2 flex justify-between items-center'>
-                        <h3 classname='font-semibold text-lg'>Slicing UI</h3>
+                    <div className='bg-white rounded shadow-lg w-10/12 md:w-2/3 h-2/3 md:h-3/4 overflow-y-auto'>
+                      <div className='border-b px-4 py-2 flex justify-between items-center'>
+                        <h3 className='font-semibold text-lg'>Slicing UI</h3>
                         <button
                           className='abosulte bg-gray-400 hover:bg-gray-500 py-2 px-4 rounded'
                           onClick={() => {
@@ -452,12 +452,12 @@ export default function Home () {
                       </div>
 
                       <div className=''>
-                        <div classname='w-full static p-4'>
+                        <div className='w-full static p-4'>
                           <div className='desc font-bold mb-3'>Description</div>
                           Hi, Here I learn slicing with tailwind css and nextjs
                         </div>
 
-                        <div classname='w--full p-4'>
+                        <div className='w--full p-4'>
                           <img
                             className='md:w-full shadow-xl p-2'
                             src='/img/learn/SlicingBlog.JPG'
@@ -495,13 +495,13 @@ export default function Home () {
                   </button>
 
                   <div
-                    classname={`modal h-screen w-full fixed left-0 top-0 overflow-y-auto flex justify-center items-center bg-black bg-opacity-50
+                    className={`hidden modal h-screen w-full fixed left-0 top-0 overflow-y-auto flex justify-center items-center bg-black bg-opacity-50
                     ${modal === 0 ? 'hidden' : 'block'}
                     `}
                   >
-                    <div classname='bg-white rounded shadow-lg w-10/12 md:w-2/3 h-2/3 md:h-3/4 overflow-y-auto'>
-                      <div classname='border-b px-4 py-2 flex justify-between items-center'>
-                        <h3 classname='font-semibold text-lg'>Sleigh API</h3>
+                    <div className='bg-white rounded shadow-lg w-10/12 md:w-2/3 h-2/3 md:h-3/4 overflow-y-auto'>
+                      <div className='border-b px-4 py-2 flex justify-between items-center'>
+                        <h3 className='font-semibold text-lg'>Sleigh API</h3>
                         <button
                           className='abosulte bg-gray-400 hover:bg-gray-500 py-2 px-4 rounded'
                           onClick={() => {
@@ -513,7 +513,7 @@ export default function Home () {
                       </div>
 
                       <div className=''>
-                        <div classname='w-full static p-4'>
+                        <div className='w-full static p-4'>
                           <div className='desc font-bold mb-3'>Description</div>
                           Hi, this my final project in campus. This API is for
                           web and mobile applications. Web apps consume API with
@@ -521,7 +521,7 @@ export default function Home () {
                           and mobile apps consume API with Axios.
                         </div>
 
-                        <div classname='w--full p-4'>
+                        <div className='w--full p-4'>
                           <img
                             className='md:w-full shadow-xl p-2'
                             src='/img/project/sleigh/RESTSLEIGH.JPG'
