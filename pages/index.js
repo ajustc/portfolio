@@ -263,6 +263,11 @@ export default function Home () {
                   src='/img/Git.svg'
                   title='GIT'
                 />
+                <img
+                  className='w-20 h-20 m-3 group-hover:drop-shadow-md transition-all grayscale group-hover:grayscale-0'
+                  src='/img/React.svg'
+                  title='React'
+                />
               </div>
             </div>
           </div>
