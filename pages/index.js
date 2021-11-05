@@ -7,8 +7,8 @@ export default function Home () {
   const [togglenavbar, setToggleNavbar] = useState(false)
   const [certificate, setCertificate] = useState(1)
   const [activity, setActivity] = useState(1)
-  const [modal, setModal] = useState(0)
-  const [closemodal, setCloseModal] = useState(false)
+  const [modal, setModal] = useState('')
+  const [closemodal, setCloseModal] = useState('')
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 80) {
@@ -29,6 +29,7 @@ export default function Home () {
         <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
       </Head>
       <div className='min-h-screen bg-gradient-to-b from-gray-300/70 to-gray-600/70'>
+        {/* NAVBAR */}
         <nav
           className={`navbar w-full mx-auto py-4 z-50 xl:px-40 md:px-20 px-0 transition-all
         ${bgnavbar ? 'bg-white/90 fixed' : ''}`}
@@ -96,7 +97,7 @@ export default function Home () {
                 </button>
               )}
             </div>
-            <div className='md:w-8/12'>
+            <div className='md:w-2/5 lg:w-8/12'>
               <div className='flex justify-center'>
                 <ul
                   className={`md:flex md:space-x-6 md:static md:w-0 md:flex-row transition-all absolute top-16 flex-col bg-white w-full
@@ -129,6 +130,7 @@ export default function Home () {
           </div>
         </nav>
 
+        {/* HERO */}
         <div id='hero' className='hero'>
           <div className='container mx-auto md:flex w-2/3 py-20'>
             <div className='block md:hidden w-full md:w-7/12 mb-4'>
@@ -415,22 +417,7 @@ export default function Home () {
                     <button
                       className='flex md:w-1/2 flex-col items-center justify-center p-3 hover:shadow-xl hover:bg-white/10 rounded transition-all'
                       onClick={() => {
-                        setModal(1)
-                      }}
-                    >
-                      <img
-                        className='w-full m-2'
-                        src='/img/learn/SlicingBlog.JPG'
-                        alt=''
-                      />
-                      <span className='bg-white border-2 border-transparent transition-all focus:hidden hover:border-2 py-2 px-4 rounded'>
-                        View
-                      </span>
-                    </button>
-                    <button
-                      className='flex md:w-1/2 flex-col items-center justify-center p-3 hover:shadow-xl hover:bg-white/10 rounded transition-all'
-                      onClick={() => {
-                        setModal(1)
+                        setModal('learn-one')
                       }}
                     >
                       <img
@@ -445,8 +432,8 @@ export default function Home () {
 
                     <div
                       className={`modal h-screen w-full fixed left-0 top-0 overflow-y-auto flex justify-center items-center bg-black bg-opacity-50
-                    ${modal === 0 ? 'hidden' : 'block'}
-                    `}
+                      ${modal === 'learn-one' ? 'block' : 'hidden'}
+                      `}
                     >
                       <div className='bg-white rounded shadow-lg w-10/12 md:w-2/3 h-2/3 md:h-3/4 overflow-y-auto'>
                         <div className='border-b px-4 py-2 flex justify-between items-center'>
@@ -454,7 +441,7 @@ export default function Home () {
                           <button
                             className='abosulte bg-gray-400 hover:bg-gray-500 py-2 px-4 rounded'
                             onClick={() => {
-                              setModal(0)
+                              setModal('')
                             }}
                           >
                             Close
@@ -491,15 +478,32 @@ export default function Home () {
                   }`}
                 >
                   <div className='flex flex-wrap items-center justify-center'>
+                    {/* Project-One */}
                     <button
                       className='flex md:w-1/2 flex-col items-center justify-center p-3 hover:shadow-xl hover:bg-white/10 rounded transition-all'
                       onClick={() => {
-                        setModal(1)
+                        setModal('project-one')
                       }}
                     >
                       <img
                         className='w-full m-2'
-                        src='/img/project/sleigh/RESTSLEIGH.JPG'
+                        src='/img/project/Sleigh/RESTSLEIGH.JPG'
+                        alt=''
+                      />
+                      <span className='bg-white border-2 border-transparent transition-all focus:hidden hover:border-2 py-2 px-4 rounded'>
+                        View
+                      </span>
+                    </button>
+                    {/* Project-Two */}
+                    <button
+                      className='flex md:w-1/2 flex-col items-center justify-center p-3 hover:shadow-xl hover:bg-white/10 rounded transition-all'
+                      onClick={() => {
+                        setModal('project-two')
+                      }}
+                    >
+                      <img
+                        className='w-full m-2'
+                        src='/img/project/Laracasts/LARACASTS.png'
                         alt=''
                       />
                       <span className='bg-white border-2 border-transparent transition-all focus:hidden hover:border-2 py-2 px-4 rounded'>
@@ -507,9 +511,10 @@ export default function Home () {
                       </span>
                     </button>
 
+                    {/* Project-One */}
                     <div
-                      className={`hidden modal h-screen w-full fixed left-0 top-0 overflow-y-auto flex justify-center items-center bg-black bg-opacity-50
-                    ${modal === 0 ? 'hidden' : 'block'}
+                      className={`modal h-screen w-full fixed left-0 top-0 overflow-y-auto flex justify-center items-center bg-black bg-opacity-50
+                    ${modal === 'project-one' ? 'block' : 'hidden'}
                     `}
                     >
                       <div className='bg-white rounded shadow-lg w-10/12 md:w-2/3 h-2/3 md:h-3/4 overflow-y-auto'>
@@ -518,7 +523,7 @@ export default function Home () {
                           <button
                             className='abosulte bg-gray-400 hover:bg-gray-500 py-2 px-4 rounded'
                             onClick={() => {
-                              setModal(0)
+                              setModal('')
                             }}
                           >
                             Close
@@ -550,6 +555,48 @@ export default function Home () {
                             <img
                               className='md:w-full shadow-xl p-2'
                               src='/img/project/sleigh/MobileLogin.png'
+                              alt=''
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Project-Two */}
+                    <div
+                      className={`modal h-screen w-full fixed left-0 top-0 overflow-y-auto flex justify-center items-center bg-black bg-opacity-50
+                    ${modal === 'project-two' ? 'block' : 'hidden'}
+                    `}
+                    >
+                      <div className='bg-white rounded shadow-lg w-10/12 md:w-2/3 h-2/3 md:h-3/4 overflow-y-auto'>
+                        <div className='border-b px-4 py-2 flex justify-between items-center'>
+                          <h3 className='font-semibold text-lg'>
+                            Laracasts Cloning
+                          </h3>
+                          <button
+                            className='abosulte bg-gray-400 hover:bg-gray-500 py-2 px-4 rounded'
+                            onClick={() => {
+                              setModal('')
+                            }}
+                          >
+                            Close
+                          </button>
+                        </div>
+
+                        <div className=''>
+                          <div className='w-full static p-4'>
+                            <div className='desc font-bold mb-3'>
+                              Description
+                            </div>
+                            Hi, in here im create website like a Laracasts for
+                            individual project client, and the website made with
+                            Laravel 8, Bootstrap. Then thank u use my services
+                          </div>
+
+                          <div className='w--full p-4'>
+                            <img
+                              className='md:w-full shadow-xl p-2'
+                              src='/img/project/Laracasts/LARACASTS.png'
                               alt=''
                             />
                           </div>
