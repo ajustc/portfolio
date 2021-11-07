@@ -590,7 +590,7 @@ export default function Home () {
                             </div>
                             Hi, in here im create website like a Laracasts for
                             individual project client, and the website made with
-                            Laravel 8, Bootstrap. Then thank u use my services
+                            Laravel 8, using Bootstrap and tailwindcss styling.
                           </div>
 
                           <div className='w--full p-4'>
